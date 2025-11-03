@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int x = 50;     // 1. Declare an integer 'x' and set its value to 50.
+    int *p;         // 2. Declare an integer pointer 'p'. It will hold an address.
+    
+    p = &x;         // 3. Assign the memory address of 'x' to 'p' (Address-of operator: &).
+    
+    printf("Value of x: %d\n", x); // Output: 50 (Direct access)
+    
+    printf("Address of x: %p\n", p); // Output: The memory address (e.g., 0x7fff...)
+    
+    printf("Value via p: %d\n", *p); // 4. Get the value *at* the address in 'p' (Dereference operator: *). Output: 50
+    
+    *p = 100;       // 5. Change the value *at* the address in 'p'. This changes 'x' to 100.
+    
+    printf("New value of x: %d\n", x); // Output: 100
+    
+    return 0;
+}
