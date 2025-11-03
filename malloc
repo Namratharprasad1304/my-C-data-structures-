@@ -1,0 +1,22 @@
+#include <stdlib.h> // Required for malloc and free
+
+int main() {
+    int *num1 = (int*)malloc(sizeof(int)); // Allocate memory for one integer
+    int *num2 = (int*)malloc(sizeof(int)); // Allocate memory for another integer
+
+    if (num1 == NULL || num2 == NULL) { // Check for successful allocation
+        // Handle memory allocation failure
+        return 1; 
+    }
+
+    *num1 = 10; // Assign value to the dynamically allocated memory
+    *num2 = 20;
+
+    int sum = *num1 + *num2; // Perform addition
+
+    // Free the dynamically allocated memory
+    free(num1); 
+    free(num2);
+
+    return 0;
+}
