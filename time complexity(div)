@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int numerator = 100;    // O(1) assignment
+    int denominator = 5;    // O(1) assignment
+    
+    // Core Operation: Division and Assignment
+    // This takes a single, fixed amount of time.
+    int result = numerator / denominator; // O(1)
+    
+    printf("Result of %d / %d is: %d\n", numerator, denominator, result);
+    
+    return 0;
+}
