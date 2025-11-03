@@ -1,0 +1,13 @@
+#include <stdlib.h> // For malloc and realloc
+
+int main() {
+    int *arr = malloc(sizeof(int)); // Initially allocate for 1 integer
+    *arr = 5; // Assign an initial value
+
+    // Reallocate to double the size (for 2 integers)
+    arr = realloc(arr, 2 * sizeof(int)); 
+    arr[1] = *arr * 2; // Store the multiplied value in the new space
+
+    // ... further operations and free(arr)
+    return 0;
+}
